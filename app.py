@@ -80,7 +80,6 @@ class PostgresVectorRetriever(BaseRetriever, BaseModel):
 
 
 
-
     def get_relevant_documents(self, query: str) -> List[Document]:
         
         #  検索クエリをベクトル化
