@@ -1,1 +1,42 @@
+# 📊 Postgres AI Search
+
+このアプリケーションは、**PostgreSQL + pgvector** を活用したベクトル検索およびSQL生成エージェントを備えた、Streamlit製のインタラクティブなAI検索ツールです。
+
+## 🚀 主な機能
+
+- ➕ **データ追加**：任意のタイトル・内容・ベクトル埋め込みをデータベースに登録  
+- 📋 **データ表示**：登録済みデータの一覧を取得・表示
+- 🔍 **ベクトル検索**：Google Embedding や HuggingFace Embedding を使って類似データを検索  
+- 🤖 **SQL生成エージェント**：自然言語からSQLを生成し、PostgreSQLとやり取り  
+
+---
+
+## 📦 使用ライブラリ
+
+- `streamlit`
+- `langchain`
+- `langchain-google-genai`
+- `sentence-transformers`（HuggingFace）
+- `psycopg2`
+- `sqlalchemy`
+- `pgvector`（PostgreSQL用）
+- `pydantic`
+- `pandas`
+
+---
+
+## 📁 ディレクトリ構成（例）
+
+
+├── .streamlit/
+│   ├── config.toml
+│   └── secrets.toml
+├── .gitignore
+├── app.py                    # メインのStreamlitアプリ
+├── csv_read.py              # CSV読み込み用スクリプト
+├── embedding.py             # Embedding関連の処理を分離
+├── 80kitem_list.csv         # 元データCSV
+├── output_documents.csv     # 処理済みデータの出力CSV（中間ファイル）
+├── readme                   # README（拡張子.mdがついていないなら `.md` にするのが通例）
+├── requirements.txt         # 使用ライブラリ一覧
 
