@@ -1,0 +1,6 @@
+/.DS_Store
+/__pycache__
+/civil_materials_sample.csv
+/civil_materials_summary.csv
+/faiss_store
+/seed.py
